@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"ontent="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue.js</title>
+</head>
+<body>
+<div id="app">
+    <p>{{message}}</p>
+
+    <input type="number" v-model.lazy.number="amount">
+
+    <amount-selector
+        :amount.number="amount"
+        :min_share_count.number="min_share_count"
+        :max_share_count.number="max_share_count"
+        :amount_per_share.number="amount_per_share"></amount-selector>
+</div>
+
+<style>
+    .box {
+        display: inline-block;
+        width: 200px;
+        height: 200px;
+        border: solid black 1px;
+    }
+
+    .active {
+        background-color: #2c90ff;
+    }
+</style>
+<script src="node_modules/vue/dist/vue.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
